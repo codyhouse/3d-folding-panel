@@ -62,6 +62,6 @@ jQuery(document).ready(function($){
 
 	function viewportSize() {
 		/* retrieve the content value of .cd-main::before to check the actua mq */
-		return window.getComputedStyle(document.querySelector('.cd-main'), '::before').getPropertyValue('content');
+		return window.getComputedStyle(document.querySelector('.cd-main'), '::before').getPropertyValue('content').replace(/"/g, "").replace(/'/g, "");
 	}
 });
